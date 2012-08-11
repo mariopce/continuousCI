@@ -18,25 +18,6 @@
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
-
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
 <body class="impress-not-supported">
 
 <!--
@@ -47,76 +28,30 @@
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<!--
-    
-    Now that's the core element used by impress.js.
-    
-    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
-    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
-    
-    You probably won't need it now, but there are some configuration options that can be set on this element.
-    
-    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
-    a number of ms. It defaults to 1000 (1s).
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
-    https://developer.mozilla.org/en/CSS/perspective
-    
-    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
-    right around the corner of this tag ;)
-    
--->
 <div id="impress">
 
-    <!--
-        
-        Here is where interesting thing start to happen.
-        
-        Each step of the presentation should be an element inside the `#impress` with a class name
-        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
-        the 'camera' shows them on each step of the presentation.
-        
-        Positioning information is passed through data attributes.
-        
-        In the example below we only specify x and y position of the step element with `data-x="-1000"`
-        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
-        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
-        
-        It will not be rotated or scaled.
-        
-    -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-rotate-x="-90" data-rotate-y="10">
+
+    <div id="semmelweis" class="step slide" data-x="-1000" data-y="-1500" data-rotate-x="-90" data-rotate-y="10">
     	<q>w 1818 roku urodził się <strong>Ignaz Semmelweis</strong> osoba, która wprowadziła mycie rąk przez lekarzy przed zabiegami</q>
     </div>
-    <div class="step slide" data-x="-1000" data-y="-1000" data-rotate-x="-60" data-rotate-y="10">
+    <div id="lekarze" class="step slide" data-x="-1000" data-y="-1000" data-rotate-x="-60" data-rotate-y="10">
         <q>Lekarzom nie podobały się zalecane przez Sammweweisa metody odkażania rąk</q>
     </div>
-	<div class="step slide" data-x="-1000" data-y="-500" data-rotate-x="-40" data-rotate-y="10">
+	<div id="praca" class="step slide" data-x="-1000" data-y="-500" data-rotate-x="-40" data-rotate-y="10">
 		<q>W 1861 r. w Wiedniu opublikował swoją pracę pod tytułem "Pojęcie i Profilaktyka Gorączki Połogowej)"
 		Szczególnie ta druga publikacja spotkała się w środowisku lekarzy z dużym rozgłosem !! 
 		</q>
 	</div>
-	<div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+	<div id="negatywnie" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
         <br/><br/><br/><br/><h2>głównie jednak negatywnym</h2>
     </div>
     
-    <div id="tiny2" class="step" data-x="0" data-y="-1000" data-scale="2">
+    <div id="ci" class="step" data-x="0" data-y="-1000" data-scale="2">
         <b>Continuous Integration</b><br/>  
         <q>Niestety jeszcze w niektórych firmach programiści i managerowie uznają, że CI to strata czasu – najczęściej wtedy projekt <strong>umiera.</strong></q><br/>
         <i>Jeśli chcesz, żeby twój projekt był zdrowy – używaj CI </i>
     </div>
-    <!--
-        
-        This is an example of step element being scaled.
-        
-        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-        element will be 4 times larger than the others.
-        From presentation and transitions point of view it means, that it will have to be scaled
-        down (4 times) to make it back to it's correct size.
-        
-    -->
+
     <div id="title" class="step" data-x="0" data-y="0" data-scale="2" data-rotate-x="-40" data-rotate-y="10">
         <div style="text-align:center">
         	<b>Continuous Integration w Android*</b>
@@ -127,33 +62,45 @@
         
     </div>
 
-    <!--
-        
-        This element introduces rotation.
-        
-        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-        element should be rotated by 90 degrees clockwise.
-        
-    -->
-    <div id="its" class="step" data-x="850" data-y="1000" data-z="1000" data-rotate="90" data-scale="1">
-       	dddddddddddddddd
+    <div id="czy" class="step" data-x="850" data-y="9000" data-z="1000" data-rotate="90" data-scale="1">
+       	Po co jest CI ? 
+       	<ul>
+       		<li>Czy komuś zdażyło się nie skomitować pliku </li>
+       		<li>Czy zdarzył się, że projekt budował się tylko u was/ u kolegi </li>
+       		<li>Czy szef chciał zbudowany build za 5 min ?</li>
+       		<li>Czy za każdym razem uruchamiasz testy ? analize statyczną kodu ? </li>
+       	</ul>
+       	<div class="footnote">to zbiór narzędzi do ciągłego i nieustannego tworzenia programu</div>
     </div>
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    <div id="typeofci" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="2">
+    	<b>Narzędzia do wyboru</b>
+    	<ul>
+    		<li><img src="img/bamboo.jpeg" width="150px" align="left"  />Bamboo- Atlassian - koszt od 120$ -1800$<br/><br/></li>
+    		<li><img src="img/jenkins.jpg" align="top" />Jenkins 0$</li>
+    		<li><img src="img/qb.png" align="top"/>QuickBuild ( free version )</li>
+    	</ul>
     </div>
 
-    <!--
-        
-        And now it gets really exiting! We move into third dimension!
-        
-        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-        positioned far away from us (by 3000px).
-        
-    -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
+  
+    <div id="jenkins-zalety" class="step" data-x="3500" data-y="3100" data-rotate="180"  data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p>Zalety jenkins <img src="img/jenkins.jpg" height="150px" align="top" /></p>
+        <ul>
+        	<li><img src="img/cash.jpg" height="150px">Bezpłatny</li>
+        	<li><img src="img/opensource.jpg" height="150px"/>open-source</li>
+        	<li>duża ilość pluginów</li>
+        </ul>
+    </div>
+
+	 <div id="jenkins-pluginy" class="step" data-x="3500" data-y="4100" data-rotate="180"  data-rotate-x="-80" data-rotate-y="10" data-scale="2">
+        <p><img src="img/jenkins.jpg" height="150px" align="top" /> Pluginy</p>
+        <ul>
+        	<li>583 pluginy</li>
+        	<li>do ściągania źródeł z cvs, svn, git, perforca, mercuriala i innych, do integracji z jirą i mantisem</li>
+        	<li>dla języków: java, c++, php, delphi, c#</li>
+        	<li>jakość kodu: findbugs, PMD, checkstyle, sonar</li>
+        	<li>testy - raportowanie</li>
+        </ul>
     </div>
 
     <!--

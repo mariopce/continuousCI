@@ -25,7 +25,8 @@ body {
   line-height: 1;
 }
 ol, ul {
-  list-style: none;
+  font-size: 48px;
+  list-style: circle;
 }
 blockquote, q {
   quotes: none;
@@ -155,12 +156,13 @@ h1 {
   margin: 0 auto;
   text-indent: -999em;
 }
-#title .footnote {
+.footnote {
   font-size: 24px;
   color: #333;
-  width: 636px;
-  margin: 4em auto 0;
+  width: 636px;  
 }
+
+
 #title .footnote span {
   display: block;
 }
@@ -169,8 +171,7 @@ h1 {
 }
 #its {
   text-align: center;
-  font-size: 64px;
-  padding-top: 1em;
+  font-size: 56px;
 }
 #its b {
   display: block;
@@ -182,6 +183,11 @@ h1 {
   display: block;
   font-size: 100px;
 }
+
+#jenkins-pluginy ul {
+	font-size: 42px;
+}
+
 #level p {
   width: 50%;
   margin: 2em auto;
