@@ -143,7 +143,10 @@ a:hover {
   width: 636px;
   margin: 0 auto 1em;
 }
-
+#open .step{
+	margin: 0px;
+	padding: 0px;
+}
 h1 {
   font-size: 64px;
   margin: 0 auto;
